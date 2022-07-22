@@ -1,0 +1,28 @@
+
+		body{
+            margin: 0;
+        }
+         table {
+            background-color: rgb(143, 228, 159);
+            color: black;
+            padding: 18px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+			border-collapse:collapse;
+          }
+		  th{
+			color:black;
+			text-align:left;
+			padding:8px;
+			background-color:rgb(213, 214, 211);
+		  }
+		  td{
+
+			text-align:left;
+			padding:8px;
+		  }
+		  tr:nth-child(even){
+			color:black;
+			background-color:rgb(227, 216, 170);
+		  }
