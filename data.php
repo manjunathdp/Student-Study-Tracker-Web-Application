@@ -10,14 +10,14 @@
 
 
 	// $myuid = uniqid('KAR22');
-	mysql_select_db($dbName);
+	
 
 	$insert="insert into details values('$subject','$date','$hrs','$topic');";
 	mysql_query($insert,$conn);
 	  if( $insert )
 	 { 
 		echo "<script>
-		alert('Your registration is successful');
+		alert('Information added successful');
 		window.location.href='index.html';
 		</script>";
  	  }
