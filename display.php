@@ -14,7 +14,7 @@ die('coundnt connect'.mysql_error());
 
 mysql_select_db("mydetails");
 
-$ret2="select * from details";
+$ret2="select * from details order by date";
 
 $dbrt=mysql_query($ret2,$conn);
 
