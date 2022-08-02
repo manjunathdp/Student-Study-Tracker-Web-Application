@@ -14,7 +14,7 @@ die('coundnt connect'.mysql_error());
 
 mysql_select_db("mydetails");
 
-$ret2="select * from details order by date";
+$ret2="select subject,DATE_FORMAT(date ,'%d-%M-%Y  (%W)') as date ,hours,topic from details order by date desc";
 
 $dbrt=mysql_query($ret2,$conn);
 $totalHrs=0;
