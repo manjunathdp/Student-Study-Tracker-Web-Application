@@ -50,7 +50,7 @@ $totalHrs=0;
         <h1>Total hours=<?php echo $totalHrs ?></h1>
         <table border=1px solid black class=toptables><tr>
         <th>SUBJECT</th>
-        <th>TOPIC</th></tr>
+        <th>HOURS</th></tr>
         <?php
         $ret2="select subject,sum(hours) as hrs from details group by subject order by hours ;";
 
