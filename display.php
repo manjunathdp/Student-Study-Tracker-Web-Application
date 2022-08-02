@@ -17,6 +17,7 @@ mysql_select_db("mydetails");
 $ret2="select * from details order by date";
 
 $dbrt=mysql_query($ret2,$conn);
+$totalHrs=0;
 
 ?>
 
@@ -33,12 +34,35 @@ $dbrt=mysql_query($ret2,$conn);
     //if($dbrt->num_rows>0)
          while ($arr = mysql_fetch_assoc($dbrt))
     {
+       $totalHrs=$totalHrs+$arr['hours'];
 ?>
         <tr>
             <td><?php echo $arr['subject']; ?></td>
             <td><?php echo $arr['date']; ?></td>
             <td><?php echo $arr['hours']; ?></td>
             <td><?php echo $arr['topic']; ?></td>
+            
+        </tr>
+<?php
+    }
+    ?>
+        </table>
+        <h1>Total hours=<?php echo $totalHrs ?></h1>
+        <table border=1px solid black class=toptables><tr>
+        <th>SUBJECT</th>
+        <th>TOPIC</th></tr>
+        <?php
+        $ret2="select subject,sum(hours) as hrs from details group by subject order by hours ;";
+
+        $dbrt=mysql_query($ret2,$conn);
+    //if($dbrt->num_rows>0)
+         while ($arr = mysql_fetch_assoc($dbrt))
+    {
+       
+?>
+        <tr>
+            <td><?php echo $arr['subject']; ?></td>
+            <td><?php echo $arr['hrs']; ?></td>
             
         </tr>
 <?php

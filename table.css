@@ -6,7 +6,7 @@
             background-color: rgb(143, 228, 159);
             color: black;
             padding: 18px 20px;
-            margin: 8px 0;
+            margin: 8px ;
             cursor: pointer;
             width: 100%;
 			border-collapse:collapse;
@@ -26,3 +26,4 @@
 			color:black;
 			background-color:rgb(227, 216, 170);
 		  }
+		
