@@ -33,6 +33,7 @@ $dbrt=mysql_query($ret2,$conn);
     //if($dbrt->num_rows>0)
          while ($arr = mysql_fetch_assoc($dbrt))
     {
+        $totalHrs=$totalHrs+$arr['hours'];
 ?>
         <tr>
             <td><?php echo $arr['subject']; ?></td>
@@ -45,6 +46,7 @@ $dbrt=mysql_query($ret2,$conn);
     }
     ?>
         </table>
+        <h1>Total hours=<?php echo $totalHrs ?></h1>
         </body>
     </html>
     
