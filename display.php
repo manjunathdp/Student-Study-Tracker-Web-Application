@@ -10,9 +10,9 @@
 <?php
 include("connection.php");
 
-$ret2="select subject,DATE_FORMAT(date ,'%d-%M-%Y  (%W)') as date ,hours,topic from details order by date desc";
+$ret2="select subject,DATE_FORMAT(date ,'%d-%M-%Y  (%W)') as date ,hours,topic from details order by YEAR(date),Month(date)";
 
-$dbrt=mysql_query($ret2,$conn);
+$dbrt=mysqli_query($conn,$ret2);
 //$totalHrs=0;
 
 ?>
@@ -28,7 +28,7 @@ $dbrt=mysql_query($ret2,$conn);
         
 <?php
     //if($dbrt->num_rows>0)
-         while ($arr = mysql_fetch_assoc($dbrt))
+         while ($arr = mysqli_fetch_assoc($dbrt))
     {
        $totalHrs=$totalHrs+$arr['hours'];
 ?>
@@ -48,11 +48,11 @@ $dbrt=mysql_query($ret2,$conn);
         <th>SUBJECT</th>
         <th>HOURS</th></tr>
         <?php
-        $ret2="select subject,sum(hours) as hrs from details group by subject order by hours ;";
+        $ret2="select subject,sum(hours) as hrs from details group by subject order by hrs desc ;";
 
-        $dbrt=mysql_query($ret2,$conn);
+        $dbrt=mysqli_query($conn,$ret2);
     //if($dbrt->num_rows>0)
-         while ($arr = mysql_fetch_assoc($dbrt))
+         while ($arr = mysqli_fetch_assoc($dbrt))
     {
        
 ?>

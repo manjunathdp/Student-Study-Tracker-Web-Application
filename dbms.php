@@ -12,7 +12,7 @@ include("connection.php");
 
 $ret2="select * from details where subject='DBMS';";
 
-$dbrt=mysql_query($ret2,$conn);
+$dbrt=mysqli_query($conn,$ret2);
 
 ?>
 
@@ -27,7 +27,7 @@ $dbrt=mysql_query($ret2,$conn);
         
 <?php
     //if($dbrt->num_rows>0)
-         while ($arr = mysql_fetch_assoc($dbrt))
+         while ($arr = mysqli_fetch_assoc($dbrt))
     {
         $totalHrs=$totalHrs+$arr['hours'];
 ?>

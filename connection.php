@@ -4,8 +4,8 @@
 	 $password="";
 	 $dbName="mydetails";
 	 $totalHrs=0;
-	 $conn=mysql_connect($serverName,$userName,$password,$dbName);
-	 mysql_select_db($dbName);
+	 $conn=mysqli_connect($serverName,$userName,$password,$dbName);
+	 
 	 //debugging code:
 	 
 	 /*if($conn)
