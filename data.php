@@ -10,12 +10,12 @@
 	  if( $insert )
 	 { 
 		echo "<script>
-		alert('Information added successful');
+		alert('Data uploaded successful');
 		window.location.href='index.html';
 		</script>";
  	  }
  	  else
- 	 	echo "Not registered \n register Again";
+ 	 	echo "There was an error\n please try Again";
 
  ?>
 
