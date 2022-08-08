@@ -15,18 +15,12 @@ $ret2="select * from details where subject='DSA';";
 $dbrt=mysqli_query($conn,$ret2);
 
 ?>
-
-
 <table border=1px solid black><tr>
         <th>SUBJECT</th>
         <th>DATE</th>
         <th>HOURS</th>
-        <th>TOPIC</th></tr>
-    
-
-        
+        <th>TOPIC</th></tr>      
 <?php
-    //if($dbrt->num_rows>0)
          while ($arr = mysqli_fetch_assoc($dbrt))
     {
         $totalHrs=$totalHrs+$arr['hours'];

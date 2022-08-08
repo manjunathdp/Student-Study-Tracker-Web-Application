@@ -13,7 +13,6 @@ include("connection.php");
 $ret2="select subject,DATE_FORMAT(date ,'%d-%M-%Y  (%W)') as date ,hours,topic from details order by YEAR(date),Month(date)";
 
 $dbrt=mysqli_query($conn,$ret2);
-//$totalHrs=0;
 
 ?>
 
@@ -22,12 +21,8 @@ $dbrt=mysqli_query($conn,$ret2);
         <th>SUBJECT</th>
         <th>DATE</th>
         <th>HOURS</th>
-        <th>TOPIC</th></tr>
-    
-
-        
+        <th>TOPIC</th></tr>      
 <?php
-    //if($dbrt->num_rows>0)
          while ($arr = mysqli_fetch_assoc($dbrt))
     {
        $totalHrs=$totalHrs+$arr['hours'];

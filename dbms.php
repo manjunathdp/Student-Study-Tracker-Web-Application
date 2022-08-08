@@ -26,7 +26,6 @@ $dbrt=mysqli_query($conn,$ret2);
 
         
 <?php
-    //if($dbrt->num_rows>0)
          while ($arr = mysqli_fetch_assoc($dbrt))
     {
         $totalHrs=$totalHrs+$arr['hours'];
