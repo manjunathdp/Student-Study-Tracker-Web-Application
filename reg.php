@@ -12,7 +12,7 @@
 	  if( $insert )
 	 { 
 		echo "<script>
-		alert('Data uploaded successful');
+		alert('Registration successful');
 		window.location.href='index.html';
 		</script>";
  	  }
