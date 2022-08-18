@@ -10,7 +10,7 @@
 <?php
 include("connection.php");
 
-$ret2="select * from details where subject='OTHER';";
+$ret2="select * from details where subject='JAVASCRIPT';";
 
 $dbrt=mysqli_query($conn,$ret2);
 
