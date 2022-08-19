@@ -11,7 +11,7 @@
 	 { 
 		echo "<script>
 		alert('Data uploaded successful');
-		window.location.href='index.html';
+		window.location.href='home.html';
 		</script>";
  	  }
  	  else
