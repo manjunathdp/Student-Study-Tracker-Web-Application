@@ -39,6 +39,10 @@ $dbrt=mysqli_query($conn,$ret2);
     ?>
         </table>
         <h1>Total hours=<?php echo $totalHrs ?></h1>
+        <?php $daterev=" select sum(hours) as today from details where date='$Date';";
+        $dbrt=mysqli_query($conn,$daterev);
+        $result=mysqli_fetch_assoc($dbrt)?>
+        <h2>Today studied=<?php echo $result['today']?></h2>
         <center><h1 style="background-color:powderblue;"><u><i>Top list of studied subjects</i></u></h1></center>
         <table border=1px solid black class=toptables><tr>
         <th>SUBJECT</th>
