@@ -33,30 +33,13 @@ CREATE TABLE IF NOT EXISTS `details` (
   `topic` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `details`
---
 
-INSERT INTO `details` (`subject`, `date`, `hours`, `topic`) VALUES
-('JAVA', '2022-07-22', 2, 'Instrallation of java jdk \r\njava:\r\nintroduction\r\nbasic structure\r\nvariables and data types\r\nliterals\r\nvideo(1-4)'),
-('OTHER', '2022-07-22', 3, 'Git and github v(1-13)'),
-('JAVA', '2022-07-23', 2, 'user Input,program to calculate percentage of student v(5-6)'),
-('JAVA', '2022-07-24', 2, 'java V(7-12)'),
-('JAVA', '2022-07-24', 2, 'hackerRank java problems'),
-('DMS', '2022-07-27', 2, 'Chapter 3 '),
-('DMS', '2022-07-28', 2, 'chapter 4 groups'),
-('JAVA', '2022-07-29', 2, 'java string methods V(13-14)'),
-('PROJECT', '2022-07-26', 0.5, 'introduction about block chine.'),
-('JAVA', '2022-07-30', 2, 'Chapter 4 Strings compleated till V(19)'),
-('JAVA', '2022-07-31', 3.5, 'leep year program and rock paper scissor program '),
-('PROJECT', '2022-07-31', 0.5, 'bitcoin'),
-('JAVA', '2022-08-01', 2, 'hacker rank problems'),
-('DBMS', '2022-08-01', 2, 'till 2NF'),
-('JAVA', '2022-08-01', 0.5, 'hacker rank problrm datatypes'),
-('DMS', '2022-08-02', 1, 'Groups THMs'),
-('DMS', '2022-08-02', 2, 'Ch3 and ch4 revision '),
-('DBMS', '2022-08-02', 2, 'Ch4 and ch5 revision '),
-('JAVA', '2022-08-02', 2, 'loops break continue V(20-24)'),
-('OTHER', '2022-08-02', 0.5, 'display.php modified added total hours and the list of subjects'),
-('DBMS', '2022-08-05', 3, 'SQL'),
-('PROJECT', '2022-08-03', 1, 'blockchain ');
+CREATE TABLE signup (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phno VARCHAR(15) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
