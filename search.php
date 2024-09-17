@@ -53,7 +53,7 @@ $dbrt=mysqli_query($conn,$ret2);
         <th>MONTH(YEAR)</th>
         <th>HOURS</th></tr>
         <?php
-        $ret2="select DATE_FORMAT(date ,'%M (%Y)') as month,sum(hours) as hrs from details WHERE subject='PROJECT' group by month;";
+        $ret2 = "SELECT DATE_FORMAT(date, '%M (%Y)') as month, SUM(hours) as hrs FROM details WHERE subject='" . $subject . "'GROUP BY month;";
 
         $dbrt=mysqli_query($conn,$ret2);
     
